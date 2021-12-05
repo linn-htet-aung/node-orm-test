@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <h1>Devices</h1>
+            
+            <p><%= device.id %> </p>
+            <p><%= device.name %> </p>
+            <p><%= device.sn %> </p>
+
+            <a href="/" class="btn btn-sm btn-primary">Home</a>
+            <a href="/edit/<%= device.id %>" class="btn btn-sm btn-primary">Edit</a>
+        </div>
+    </div>
+</body>
+</html>

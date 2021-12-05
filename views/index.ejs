@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <h1>Devices</h1>
+
+            <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Serial Number</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% devices.forEach(device => { %> 
+                    <tr>
+                        <td><%= device.id %></td>
+                        <td><%= device.name %></td>
+                        <td><%= device.sn %></td>
+                        <td>
+                            <a href="/show/<%= device.id %>" class="btn btn-sm btn-success">View Details</a>
+                            <a href="/delete/<%= device.id %>" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </td>
+                      </tr>
+                <% }) %> 
+                </tbody>
+              </table>
+
+              <a href="/add" class="btn btn-sm btn-primary">Add New Rex</a>
+        </div>
+    </div>
+</body>
+</html>
